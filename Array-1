@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+ {
+ 	int i,j,a,b,diagonal_sum=0;
+ 	printf("write value of a and b\n");
+ 	scanf("%d %d",&a,&b);
+ 	int matrix[a][b];
+ 	printf("Enter the element of [%d][%d]matrix\n",a,b);
+ 	for(i=1;i<=a;i++)
+ 	{
+ 		for(j=1;j<=b;j++)
+ 		{
+ 		 printf(" Element[%d][%d]=",i,j);
+ 		 scanf("%d",&matrix[i][j]);
+		 }
+	 }
+       printf("The given matrix is:\n");
+       for(i=1;i<=a;i++)
+       {
+ 		for(j=1;j<=b;j++)
+ 		{
+ 		 printf("%d  ",matrix[i][j]);
+		 }
+		 printf("\n");
+	 }
+	 
+	 printf("The sum of diagonal elements of given array is= ");
+	 for(i=1;i<=a;i++)
+       {
+ 		for(j=1;j<=b;j++)
+ 		{
+ 			if(i==j){
+
+ 		diagonal_sum=diagonal_sum+matrix[i][j];
+ 	}
+		 }
+	 }
+	 printf("%d",diagonal_sum);
+	 
+	 return 0;
+ }
